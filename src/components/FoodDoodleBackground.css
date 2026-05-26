@@ -1,0 +1,15 @@
+.food-doodle-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(5, 150, 105, 0.05) 100%);
+  display: block;
+}
+
+/* Ensure canvas doesn't cause layout issues */
+canvas {
+  display: block;
+}

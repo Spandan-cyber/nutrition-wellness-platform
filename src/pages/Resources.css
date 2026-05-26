@@ -1,0 +1,509 @@
+.resources-page {
+  min-height: 100vh;
+}
+
+.resources-hero {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.95) 0%, rgba(5, 150, 105, 0.95) 100%),
+              url('https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=1600&q=80') center/cover;
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.resources-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.resources-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.resource-card-link {
+  text-decoration: none;
+}
+
+.resource-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.resource-card:hover {
+  transform: translateY(-8px);
+}
+
+.resource-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.resource-card h3 {
+  font-size: 1.5rem;
+  color: #059669;
+  margin-bottom: 0.75rem;
+}
+
+.resource-card p {
+  color: #374151;
+  margin-bottom: 1.5rem;
+}
+
+.resource-btn {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.resource-btn:hover {
+  background: #059669;
+}
+
+/* Resource Detail Pages */
+.resource-detail-page {
+  min-height: 100vh;
+}
+
+.resource-hero {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.95) 0%, rgba(5, 150, 105, 0.95) 100%),
+              url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1600&q=80') center/cover;
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.resource-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.resource-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.guide-section {
+  margin-bottom: 3rem;
+}
+
+.guide-section h2 {
+  font-size: 2rem;
+  color: #059669;
+  margin-bottom: 2rem;
+}
+
+.guide-card {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #10b981;
+}
+
+.guide-card h3 {
+  color: #10b981;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.guide-card p {
+  color: #374151;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.guide-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.guide-card li {
+  color: #374151;
+  padding: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.tips-list {
+  list-style: none;
+  padding: 0;
+}
+
+.tips-list li {
+  color: #374151;
+  padding: 0.75rem 0;
+  line-height: 1.6;
+}
+
+/* Calculator Styles */
+.calculator-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.75rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #10b981;
+}
+
+.calculate-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.calculate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+}
+
+/* Calculator Results */
+.calculator-result {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.calculator-result h3 {
+  font-size: 1.5rem;
+  color: #059669;
+  margin-bottom: 1.5rem;
+}
+
+.result-card {
+  background: linear-gradient(135deg, #f0fdf4 0%, #e0f7f4 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  border-left: 4px solid #10b981;
+}
+
+.result-card h4 {
+  color: #059669;
+  margin-bottom: 0.5rem;
+}
+
+.result-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #10b981;
+  margin-bottom: 0.5rem;
+}
+
+.result-desc {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.macros-breakdown {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+  border: 2px solid #fcd34d;
+}
+
+.macros-breakdown h4 {
+  color: #78350f;
+  margin-bottom: 1rem;
+}
+
+.macros-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.macro-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.macro-name {
+  display: block;
+  color: #374151;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.macro-amount {
+  display: block;
+  font-size: 1.5rem;
+  color: #10b981;
+  font-weight: 700;
+}
+
+/* BMI Result */
+.bmi-result {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.bmi-display {
+  background: linear-gradient(135deg, #f0fdf4 0%, #e0f7f4 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 3px solid;
+  margin-bottom: 1.5rem;
+}
+
+.bmi-display h3 {
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.bmi-value {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.bmi-category {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.bmi-advice {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #10b981;
+}
+
+.bmi-advice h4 {
+  color: #059669;
+  margin-bottom: 0.75rem;
+}
+
+.bmi-advice p {
+  color: #374151;
+  line-height: 1.6;
+}
+
+.bmi-chart {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.bmi-chart h4 {
+  color: #059669;
+  margin-bottom: 1rem;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  border-left: 4px solid #10b981;
+}
+
+.category-label {
+  font-weight: 600;
+  color: #374151;
+}
+
+.category-range {
+  color: #6b7280;
+}
+
+/* Recipe Database */
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.recipe-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid #10b981;
+}
+
+.recipe-card h3 {
+  color: #059669;
+  margin-bottom: 1rem;
+}
+
+.recipe-macros {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.macro {
+  text-align: center;
+}
+
+.macro-label {
+  display: block;
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.macro-value {
+  display: block;
+  font-size: 1.125rem;
+  color: #10b981;
+  font-weight: 700;
+}
+
+.recipe-details {
+  color: #374151;
+}
+
+.recipe-details h4 {
+  color: #059669;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.recipe-details ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.recipe-details li {
+  padding: 0.25rem 0;
+}
+
+.recipe-details li::before {
+  content: '• ';
+  color: #10b981;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .resources-hero h1 {
+    font-size: 2rem;
+  }
+
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .macros-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-macros {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resource-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .guide-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .resources-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .resource-card {
+    padding: 1.5rem;
+  }
+
+  .resource-icon {
+    font-size: 2.5rem;
+  }
+
+  .calculator-form {
+    padding: 1rem;
+  }
+
+  .guide-card {
+    padding: 1rem;
+  }
+
+  .recipe-card {
+    padding: 1rem;
+  }
+}
+

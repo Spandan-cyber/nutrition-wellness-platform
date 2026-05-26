@@ -1,0 +1,47 @@
+.dynamic-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  transition: background-image 0.8s ease-in-out;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.8s ease-in-out;
+  backdrop-filter: blur(2px);
+}
+
+/* Smooth fade transition */
+@keyframes backgroundFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dynamic-background {
+  animation: backgroundFade 0.8s ease-in-out;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .dynamic-background {
+    background-attachment: scroll;
+  }
+
+  .background-overlay {
+    backdrop-filter: blur(1px);
+  }
+}

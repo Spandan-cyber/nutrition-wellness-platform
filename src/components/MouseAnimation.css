@@ -1,0 +1,116 @@
+/* Mouse Glow Effect */
+.mouse-glow {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.4) 0%, rgba(16, 185, 129, 0.1) 70%, transparent 100%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.5);
+  }
+}
+
+/* Cursor Trail */
+.cursor-trail {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9997;
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
+  animation: trailFade 0.6s ease-out forwards;
+}
+
+@keyframes trailFade {
+  0% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
+/* Click Ripple Animation */
+.click-ripple {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #10b981;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9996;
+  transform: translate(-50%, -50%);
+  animation: rippleExpand 0.6s ease-out forwards;
+}
+
+@keyframes rippleExpand {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0.4);
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+    box-shadow: 0 0 0 30px rgba(16, 185, 129, 0);
+  }
+}
+
+/* Additional click particles */
+.click-particle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9995;
+  animation: particleFloat 0.8s ease-out forwards;
+}
+
+@keyframes particleFloat {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--tx), var(--ty)) scale(0);
+  }
+}
+
+/* Smooth cursor styling */
+* {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="6" fill="%2310b981" opacity="0.6"/><circle cx="16" cy="16" r="10" fill="none" stroke="%2310b981" stroke-width="1" opacity="0.3"/></svg>') 16 16, auto;
+}
+
+button {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="8" fill="%2310b981" opacity="0.8"/><circle cx="16" cy="16" r="12" fill="none" stroke="%2310b981" stroke-width="2" opacity="0.4"/></svg>') 16 16, pointer;
+}
+
+a {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="7" fill="%2310b981" opacity="0.7"/><path d="M16 10 L20 16 L16 22 L12 16 Z" fill="%2310b981" opacity="0.5"/></svg>') 16 16, pointer;
+}
+
+input,
+textarea {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><line x1="16" y1="8" x2="16" y2="24" stroke="%2310b981" stroke-width="2" opacity="0.7"/><circle cx="16" cy="16" r="10" fill="none" stroke="%2310b981" stroke-width="1" opacity="0.3"/></svg>') 16 16, text;
+}

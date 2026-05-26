@@ -1,0 +1,272 @@
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+.loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.95) 0%, rgba(5, 150, 105, 0.95) 100%);
+  z-index: -1;
+}
+
+.loading-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  animation: scaleIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Food plate animation */
+.food-plate {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plate-center {
+  font-size: 2.5rem;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.plate-item {
+  position: absolute;
+  font-size: 1.3rem;
+  animation: orbitFood 4s linear infinite;
+}
+
+.plate-item.apple {
+  animation-delay: 0s;
+}
+
+.plate-item.banana {
+  animation-delay: 0.8s;
+}
+
+.plate-item.carrot {
+  animation-delay: 1.6s;
+}
+
+.plate-item.tomato {
+  animation-delay: 2.4s;
+}
+
+.plate-item.broccoli {
+  animation-delay: 3.2s;
+}
+
+@keyframes orbitFood {
+  0% {
+    transform: translate(40px, 0) rotate(0deg);
+    opacity: 0.6;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(0, 40px) rotate(90deg);
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-40px, 0) rotate(180deg);
+    opacity: 0.6;
+  }
+}
+
+/* Loading text */
+.loading-text {
+  text-align: center;
+  color: white;
+  animation: fadeIn 0.8s ease-out 0.3s backwards;
+}
+
+.loading-text h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.5px;
+}
+
+.loading-subtitle {
+  font-size: 0.85rem;
+  margin: 0;
+  opacity: 0.95;
+  font-weight: 300;
+}
+
+/* Motivational quote */
+.motivation-quote {
+  text-align: center;
+  color: white;
+  min-height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.8s ease-out 0.5s backwards;
+}
+
+.motivation-quote p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  animation: slideInUp 0.5s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading dots animation */
+.loading-dots {
+  display: flex;
+  gap: 0.3rem;
+  justify-content: center;
+}
+
+.loading-dots span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: white;
+  animation: bounce 1.4s infinite;
+}
+
+.loading-dots span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loading-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-8px);
+  }
+}
+
+/* Progress bar */
+.loading-progress {
+  width: 120px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, white, rgba(255, 255, 255, 0.5), white);
+  border-radius: 2px;
+  animation: progress 2s ease-in-out infinite;
+}
+
+@keyframes progress {
+  0% {
+    width: 0%;
+    transform: translateX(-100%);
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .loading-text h2 {
+    font-size: 1.3rem;
+  }
+
+  .loading-subtitle {
+    font-size: 0.75rem;
+  }
+
+  .motivation-quote p {
+    font-size: 0.8rem;
+  }
+
+  .loading-progress {
+    width: 100px;
+  }
+
+  .plate-center {
+    font-size: 2rem;
+  }
+
+  .plate-item {
+    font-size: 1rem;
+  }
+}
