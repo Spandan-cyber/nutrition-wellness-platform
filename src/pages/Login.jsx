@@ -71,6 +71,9 @@ const Login = () => {
       // Save login to device
       saveLoginToDevice({ ...data, loginMethod: 'email' });
 
+      // Dispatch custom event to notify Navbar
+      window.dispatchEvent(new Event('userLoggedIn'));
+
       // Show success message
       alert(`Welcome back, ${data.user.name}! Check your email for login notification.`);
       
@@ -122,6 +125,9 @@ const Login = () => {
       // Save login to device
       saveLoginToDevice(userData);
 
+      // Dispatch custom event to notify Navbar
+      window.dispatchEvent(new Event('userLoggedIn'));
+
       // Show success message
       alert(`Welcome, ${userData.user.name}! Logged in with Google.`);
       
@@ -172,6 +178,9 @@ const Login = () => {
 
       // Save guest login to device
       saveLoginToDevice(guestData);
+
+      // Dispatch custom event to notify Navbar
+      window.dispatchEvent(new Event('userLoggedIn'));
 
       // Show success message
       alert('Welcome, Guest! Your session is temporary and will be cleared on refresh.');

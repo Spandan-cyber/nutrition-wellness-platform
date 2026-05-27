@@ -44,6 +44,20 @@ const Navbar = () => {
 
     checkLoginStatus();
 
+    // Listen for storage changes (login from other tabs or windows)
+    const handleStorageChange = () => {
+      checkLoginStatus();
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+    
+    // Also listen for custom event from Login page
+    window.addEventListener('userLoggedIn', checkLoginStatus);
+
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+      window.removeEventListener('userLoggedIn', checkLoginStatus);
+    };
   }, []);
 
   const isActive = (path) => location.pathname === path;
